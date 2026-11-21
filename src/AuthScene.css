@@ -1,0 +1,178 @@
+/* Shared landing-page photograph with editorial copy and a quiet form card. */
+.login-page{
+ position:relative;isolation:isolate;min-height:100svh;
+ display:grid;grid-template-columns:minmax(0,1.15fr) minmax(390px,.85fr);
+ align-items:stretch;gap:clamp(28px,5vw,88px);
+ padding:30px clamp(25px,5vw,80px);
+ background:#241d30 url('/images/creator-reel-poster.jpg') center 43% / cover no-repeat;
+ color:#29263f;
+}
+.login-page::before{content:'';position:absolute;inset:0;background:#17102099;z-index:-1}
+.login-page .login-story{
+ display:flex;flex-direction:column;position:relative;min-height:0;
+ padding:10px 0 0;margin:0;border:0;border-radius:0;
+ background:transparent;color:#fff;overflow:visible;
+}
+.login-page .login-story::before{display:none}
+.login-page .login-brand,.login-page .signup-brand{color:#fff;font-size:30px}
+.login-page .login-brand>span,.login-page .signup-brand>span{border-radius:50%;background:#7955d8}
+.login-page .login-story-copy,.login-page .signup-welcome-copy{margin:auto 0;max-width:620px;padding:70px 0}
+.login-page .login-story-copy .login-eyebrow,.login-page .signup-welcome-copy>p:first-child{
+ color:#e4d6f6;font-size:11px;letter-spacing:.13em;line-height:1.8;margin:0 0 22px;
+}
+.login-page .login-story-copy h2{font-size:clamp(48px,5.4vw,82px);line-height:1.04;letter-spacing:-.035em;margin:0 0 24px}
+.login-page .login-story-copy h2 em,.login-page .signup-welcome h1 em{color:#dac5fc}
+.login-page .login-story-copy>p:last-child,.login-page .signup-description{
+ color:#eee7f5;font-size:16px;line-height:1.8;max-width:390px;margin:0;
+}
+.login-page .signup-welcome h1{font-size:clamp(72px,8vw,112px);margin:0 0 25px}
+.login-page .login-story-bottom{margin-top:0;border-color:#ffffff30;color:#e3d6f0;padding-top:20px;padding-bottom:7px;font-size:9px}
+.login-page .login-story-bottom>span:last-child{color:#e3d6f0}
+.login-page .login-form-side{
+ align-self:center;min-height:0;width:100%;max-width:520px;justify-self:end;
+ padding:28px 35px 22px;border:1px solid #ffffff80;
+ border-radius:23px;background:#fdfcfe;box-shadow:0 22px 65px #10091e35;
+}
+.login-page .login-form-wrap{padding:38px 0 25px;max-width:100%;margin:0}
+.login-page .login-form-wrap h1{font-size:57px}
+.login-page .login-form-wrap>.login-eyebrow{font-size:9px;margin-bottom:15px}
+.login-page .login-topbar{font-size:11px;gap:10px}
+.login-page .login-intro{font-size:14px;margin-bottom:26px}
+.login-page .login-form{gap:19px}
+.login-page .login-input-wrap{height:49px;background:#fff;border-color:#e3ddea}
+.login-page .login-submit,.login-page .signup-continue{border-radius:10px;background:#7452c2;box-shadow:none;font-size:14px}
+.login-page .login-submit:hover,.login-page .signup-continue:hover{background:#6242ac;transform:none}
+.login-page .login-signup{font-size:12px;margin-top:23px;padding-top:20px}
+.login-page .login-signup>span{font-size:21px}
+.login-page .login-footer{font-size:10px;color:#96879f}
+.login-page .signup-card{max-width:100%;padding:0}
+.login-page .signup-step h2{font-size:39px}
+.login-page .signup-role{background:white;border-radius:9px}
+.login-page .signup-role.is-selected{background:#f1ebf9;border-color:#b39bd6}
+.login-page .signup-field>label{font-size:12px}
+.login-page .signup-field>input,.login-page .signup-password-wrap>input{font-size:14px}
+.login-page .signup-login{font-size:12px;margin-top:18px}
+.login-page .signup-art,.login-page .login-soundscape{display:none}
+.login-page .login-title-line,.login-page .login-form-wrap,.login-page .signup-card,.login-page .signup-welcome-copy,.login-page .login-story-copy>p:last-child{animation:none}
+@media(min-width:769px) and (max-height:740px){
+ .login-page{padding-top:20px;padding-bottom:20px}
+ .login-page .login-form-side{padding:23px 28px 19px}
+ .login-page .login-form-wrap{padding:25px 0 18px}
+ .login-page .login-form-wrap h1{font-size:49px}
+ .login-page .login-story-copy,.login-page .signup-welcome-copy{padding:40px 0}
+ .login-page .signup-fields-grid{gap:10px 14px}
+ .login-page .signup-role{padding:10px}
+}
+@media(max-width:1000px) and (min-width:769px){
+ .login-page{grid-template-columns:minmax(0,1fr) minmax(360px,1fr);gap:28px;padding:25px}
+ .login-page .login-story-copy h2{font-size:48px}
+ .login-page .login-story-copy>p:last-child,.login-page .signup-description{font-size:14px}
+ .login-page .login-form-side{padding:25px}
+ .login-page .login-topbar>span{font-size:10px}
+}
+@media(max-width:768px){
+ .login-page{display:flex;flex-direction:column;gap:25px;padding:25px 6%;background-position:40% center}
+ .login-page .login-story{display:flex;padding:0;min-height:0}
+ .login-page .login-brand,.login-page .signup-brand{font-size:26px}
+ .login-page .login-brand>span,.login-page .signup-brand>span{width:37px;height:37px}
+ .login-page .login-story-copy,.login-page .signup-welcome-copy{padding:30px 0 0;margin:0;max-width:500px}
+ .login-page .login-story-copy .login-eyebrow,.login-page .signup-welcome-copy>p:first-child{font-size:10px;margin-bottom:13px}
+ .login-page .login-story-copy h2{font-size:43px;margin-bottom:14px}
+ .login-page .signup-welcome h1{font-size:65px;margin-bottom:14px}
+ .login-page .login-story-copy>p:last-child,.login-page .signup-description{font-size:14px;line-height:1.65;max-width:360px}
+ .login-page .login-story-bottom,.login-page .login-mobile-brand{display:none}
+ .login-page .login-form-side{align-self:center;justify-self:auto;padding:24px;border-radius:18px;max-width:480px}
+ .login-page .login-form-wrap{padding:26px 0 22px}
+ .login-page .login-form-wrap>.login-eyebrow{font-size:9px}
+ .login-page .login-form-wrap h1{font-size:48px}
+ .login-page .login-topbar{font-size:10px}
+ .login-page .login-topbar>span{font-size:10px}
+ .login-page .login-input-wrap>input,.login-page .signup-field>input,.login-page .signup-password-wrap>input{font-size:16px}
+ .login-page .signup-step h2{font-size:35px}
+ .login-page .signup-fields-grid{gap:15px}
+ .login-page .signup-login{font-size:12px}
+}
+/* An explicit image keeps the shared scene independent of signup background rules. */
+.login-page.login-page{background-color:#241d30;background-image:none}
+.login-page>.auth-background{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 43%;z-index:-2;pointer-events:none}
+.login-page.login-page::before{background:#17102080}
+@media(prefers-reduced-motion:no-preference){
+ .login-page .login-story-copy>.login-eyebrow,
+ .login-page .signup-welcome-copy>p:first-child{animation:auth-copy-enter .65s cubic-bezier(.2,.7,.3,1) .08s both}
+ .login-page .login-title-mask:first-child .login-title-line,
+ .login-page .signup-welcome-copy h1{animation:auth-copy-enter .8s cubic-bezier(.2,.7,.3,1) .2s both}
+ .login-page .login-title-mask:nth-child(2) .login-title-line{animation:auth-copy-enter .8s cubic-bezier(.2,.7,.3,1) .34s both}
+ .login-page .login-story-copy>p:last-child,
+ .login-page .signup-description{animation:auth-copy-enter .75s cubic-bezier(.2,.7,.3,1) .48s both}
+ .login-page .login-form-wrap>h1,
+ .login-page .signup-step{animation:auth-copy-enter .7s cubic-bezier(.2,.7,.3,1) .25s both}
+ @keyframes auth-copy-enter{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+}
+@media(prefers-reduced-motion:reduce){
+ .login-page .login-story-copy *,
+ .login-page .signup-welcome-copy *,
+ .login-page .login-form-wrap>h1,
+ .login-page .signup-step{animation:none!important;transform:none!important;opacity:1!important}
+}
+/* Larger supporting copy on both account forms. */
+.login-page .login-story-copy>p:last-child,.login-page .signup-description{font-size:18px;line-height:1.8;max-width:430px}
+.login-page .login-intro{font-size:16px;line-height:1.75}
+.login-page .login-signup,.login-page .signup-login{font-size:14px;line-height:1.8}
+.login-page .signup-role small{font-size:12px}
+.login-page .signup-field>p{font-size:12px;line-height:1.6}
+@media(max-width:768px){
+ .login-page .login-story-copy>p:last-child,.login-page .signup-description{font-size:16px;line-height:1.75}
+ .login-page .login-intro{font-size:16px}
+ .login-page .login-signup,.login-page .signup-login{font-size:14px}
+}
+/* Place the signup invitation in the lower-left of the photograph. */
+@media(min-width:769px){
+ .signup-page .signup-welcome{justify-content:space-between;padding-bottom:clamp(35px,8vh,90px)}
+ .signup-page .signup-welcome-copy{margin:auto 0 0;padding:70px 0 0;max-width:520px}
+ .signup-page .signup-welcome-copy>p:first-child{margin:0 0 16px;font-size:11px;line-height:1.8;letter-spacing:.1em}
+ .signup-page .signup-welcome h1{font-size:clamp(66px,7vw,104px);line-height:1.05;margin:0 0 20px}
+ .signup-page .signup-description{max-width:350px;font-size:18px;line-height:1.8;margin:0}
+}
+@media(max-width:768px){
+ .signup-page .signup-welcome-copy{padding:32px 0 9px;margin:0;max-width:400px}
+ .signup-page .signup-welcome-copy>p:first-child{margin-bottom:12px;letter-spacing:.08em}
+ .signup-page .signup-welcome h1{font-size:61px;line-height:1.05;margin-bottom:16px}
+ .signup-page .signup-description{max-width:330px;font-size:16px;line-height:1.8}
+}
+/* Center the signup copy vertically and bring it toward the form. */
+@media(min-width:769px){
+ .signup-page .signup-welcome{justify-content:initial;padding-bottom:0}
+ .signup-page .signup-welcome-copy{align-self:flex-end;width:100%;max-width:470px;margin:auto 0;padding:50px 0 50px clamp(25px,4vw,65px)}
+}
+@media(min-width:769px) and (max-width:1000px){
+ .signup-page .signup-welcome-copy{padding-left:24px}
+}
+/* Match the login page's editorial alignment and type scale. */
+.login-page.signup-page .signup-welcome{justify-content:initial;padding-bottom:0}
+.login-page.signup-page .signup-welcome-copy{align-self:auto;width:auto;max-width:620px;margin:auto 0;padding:70px 0}
+.login-page.signup-page .signup-welcome-copy>p:first-child{color:#e4d6f6;font-size:11px;letter-spacing:.13em;line-height:1.8;margin:0 0 22px}
+.login-page.signup-page .signup-welcome h1{font-size:clamp(48px,5.4vw,82px);line-height:1.04;letter-spacing:-.035em;margin:0 0 24px;font-weight:400}
+.login-page.signup-page .signup-description{color:#eee7f5;font-size:18px;line-height:1.8;max-width:430px;margin:0}
+@media(min-width:769px) and (max-height:740px){.login-page.signup-page .signup-welcome-copy{padding:40px 0}}
+@media(max-width:1000px) and (min-width:769px){.login-page.signup-page .signup-welcome h1{font-size:48px}}
+@media(max-width:768px){
+ .login-page.signup-page .signup-welcome-copy{padding:30px 0 0;margin:0;max-width:500px}
+ .login-page.signup-page .signup-welcome-copy>p:first-child{font-size:10px;margin-bottom:13px}
+ .login-page.signup-page .signup-welcome h1{font-size:43px;line-height:1.04;margin-bottom:14px}
+ .login-page.signup-page .signup-description{font-size:16px;line-height:1.75;max-width:430px}
+}
+/* Keep signup branding and welcome copy on one inset alignment line. */
+@media(min-width:769px){
+ .login-page.signup-page .signup-welcome{padding-left:clamp(24px,3vw,48px)}
+ .login-page.signup-page .signup-brand,.login-page.signup-page .signup-welcome-copy{margin-left:0}
+ .login-page.signup-page .signup-welcome-copy{padding-left:0;max-width:540px}
+}
+@media(max-width:768px){
+ .login-page.signup-page .signup-welcome{padding-left:12px;padding-right:12px}
+ .login-page.signup-page .signup-brand,.login-page.signup-page .signup-welcome-copy{margin-left:0}
+}
+.signup-title-line{display:block}
+.login-page.signup-page .signup-welcome h1{font-size:clamp(43px,4.8vw,73px);line-height:1.08}
+.login-page.signup-page .signup-description{max-width:390px}
+@media(max-width:1000px) and (min-width:769px){.login-page.signup-page .signup-welcome h1{font-size:43px}}
+@media(max-width:768px){.login-page.signup-page .signup-welcome h1{font-size:42px}.login-page.signup-page .signup-description{max-width:370px}}
